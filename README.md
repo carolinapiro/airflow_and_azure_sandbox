@@ -6,7 +6,11 @@ Astronomer is used to manage the Airflow instance.
 
 Othe technologies used are: Azure SQL Database and Azure Blob Storage.
 
-# General structure
+# Solution structure
+
+## Airflow Resources
+#Connections#
+#Variables#
 
 # Considerations
 
