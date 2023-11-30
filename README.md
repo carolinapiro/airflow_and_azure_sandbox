@@ -11,4 +11,8 @@ Othe technologies used are: Azure SQL Database and Azure Blob Storage.
 # Considerations
 
 ## Idempotency
+
+- sql: query files with in blob status before sending to the API
+- send to api and update database within the same for
+
 ## Retries
