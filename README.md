@@ -9,8 +9,8 @@ Othe technologies used are: Azure SQL Database and Azure Blob Storage.
 # Solution structure
 
 ## Airflow Resources
-#Connections#
-#Variables#
+### Connections
+### Variables
 
 # Considerations
 
