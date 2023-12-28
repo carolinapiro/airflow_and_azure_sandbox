@@ -37,6 +37,7 @@ Also, some variables were defined in the UI too, to save the number of files tha
 - count_files_in_blob_stg
 
 # Considerations
+Some considerations were made in the code regarding the idempotency of the tasks, as well as the number of times each of them sould be retried.
 
 ## Idempotency
 
