@@ -7,6 +7,18 @@ Astronomer is used to manage the Airflow instance.
 Othe technologies used are: Azure SQL Database and Azure Blob Storage.
 
 # Solution structure
+The code for this solution is in the dags folder, divided in 4 files:
+
+- In the connectors subfolder:
+  One file for each external resource used: ML API, Azure SQL Database and Azure Blob Storage.
+  In each of them, there are:
+  - class attributes for common information, such as the connection id, container id, etc.
+  - instance attributes for the hook used.
+  - methods to initialize the hook and perform operations in the resources, such as query a table, use a REST endpoint, etc.
+
+- The dag file:
+  - task definitions
+  - dag definition
 
 ## Airflow Resources
 Connections to the ML API, Azure SQL Database and Azure Blob Storage were configured in the Airflow UI.
