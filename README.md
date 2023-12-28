@@ -9,8 +9,17 @@ Othe technologies used are: Azure SQL Database and Azure Blob Storage.
 # Solution structure
 
 ## Airflow Resources
+Connections to the ML API, Azure SQL Database and Azure Blob Storage were configured in the Airflow UI.
+Also, some variables were defined in the UI too, to save the number of files that were found in the Blob Storage in previous runs of the DAG.
+
 ### Connections
+- id: "Http_Sandbox", type: 
+- id: "Blob_Sandbox", type: 
+- id: "SQL_Sandbox", type: 
+
 ### Variables
+- count_files_in_blob
+- count_files_in_blob_stg
 
 # Considerations
 
