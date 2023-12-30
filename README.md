@@ -51,7 +51,7 @@ The default retry number for each task is defined as 1, but for some tasks this 
 - add_new_files_to_database:
   It has 0 retries because we prefer to re-start the whole dag again in case of failure.
   The event of the database connection not being successful is unlikely, given that it was successful in the previous tasks,
-  but the insert statement could also fail, and it could fail on any file so the files_dict calculated in the previous task may not be accurate on a second run
+  but the insert statement could also fail, and it could fail on any file. So, the files_dict calculated in the previous task may not be accurate on a second run
   of the task, it could contain files that were already inserted in the database.
   Changes can be made to the dag logic to prevent this, but we preferred the simplicity of the current logic, and we think the insert errors won't be frequent.
   
