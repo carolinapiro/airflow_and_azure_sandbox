@@ -61,6 +61,7 @@ Some considerations were made in the code regarding the idempotency of the tasks
   One case in which an already uploaded file can be uploaded again is when the *send_upload_request(f)* method succeeded, but not the
   *update_status_for_uploaded_files(f['path'])* one. But, in tbis example, we do not have access to an endpoint in the API to check the files already
   uploaded in it.
+  
 - **upload_files_to_ML_API**:
   The files are sent to the API and the database status is updated within the same for because, in case one of the inserts fails, only its status won't
   be updated.
