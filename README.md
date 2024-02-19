@@ -4,7 +4,7 @@ That module, accessible via a REST API, anwsers topic-specific questions about t
 
 Astronomer is used to manage the Airflow instance.
 
-Othe technologies used are: Azure SQL Database and Azure Blob Storage.
+Other technologies used are: Azure SQL Database and Azure Blob Storage.
 
 # Solution structure
 The code for this solution is in the dags folder, divided in 4 files:
