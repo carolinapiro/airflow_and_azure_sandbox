@@ -36,7 +36,7 @@ The code for this solution is in the dags folder, divided in 4 files:
 
 In the Graph View of the DAG, wa can see the dependencies between the tasks, apart fron their type:
 
-(documentation/images/dag_graph_view.png)
+![DAG's Graph View](documentation/images/dag_graph_view.png)
 
 ## Airflow Resources
 Connections to the ML API, Azure SQL Database and Azure Blob Storage were configured in the Airflow UI.
