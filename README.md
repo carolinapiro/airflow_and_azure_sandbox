@@ -67,7 +67,7 @@ Some considerations were made in the code regarding the idempotency of the tasks
   uploaded in it.
   
 - **upload_files_to_ML_API**:
-  The files are sent to the API and the database status is updated within the same for because, in case one of the inserts fails, only its status won't
+  The files are sent to the API and the database status is updated within the same for loop because, in case one of the inserts fails, only its status won't
   be updated.
 
 ## Retries
