@@ -26,13 +26,17 @@ The code for this solution is in the dags folder, divided in 4 files:
   It queries the list of files in the blob storage, and compares its length with the number of files in the storage from the previous run.
   If the number of files currently available in the blob storage hasn't increased, the dag run ends.
 - **identify_new_files**:
-  The list of files in the blob storage and database are compared, and the nwely added files in the blob storage are identified.
+  The list of files in the blob storage and database are compared, and the newly added files in the blob storage are identified.
 - **add_new_files_to_database**:
   These new files are added to the database, and the number of files for future runs is updated.
 - **upload_files_to_ML_API**:
   The files are formatted and loaded into the API, and their status is updated accordingly in the database. 
 - **end**:
   Dummy task to identify the end of the process.
+
+In the Graph View of the DAG, wa can see the dependencies between the tasks, apart fron their type:
+
+(documentation/images/dag_graph_view.png)
 
 ## Airflow Resources
 Connections to the ML API, Azure SQL Database and Azure Blob Storage were configured in the Airflow UI.
