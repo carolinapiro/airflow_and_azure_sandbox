@@ -43,11 +43,11 @@ Connections to the ML API, Azure SQL Database and Azure Blob Storage were config
 Also, some variables were defined in the UI too, to save the number of files that were found in the Blob Storage in previous runs of the DAG.
 
 ### Connections
-- id: "Http_Sandbox", type: HTTP
+- id: "Http_Sandbox", type: HTTP  
   host also specified.
-- id: "Blob_Sandbox", type: Azure Blob Storage (wasb)
+- id: "Blob_Sandbox", type: Azure Blob Storage (wasb)  
   blob storage login and key also specified.
-- id: "SQL_Sandbox", type: Microsoft SQL Server (mssql)
+- id: "SQL_Sandbox", type: Microsoft SQL Server (mssql)  
   host, schema, login, password and port also specified.
 
 ### Variables
