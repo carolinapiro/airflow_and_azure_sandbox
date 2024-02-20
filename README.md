@@ -34,7 +34,7 @@ The code for this solution is in the dags folder, divided in 4 files:
 - **end**:
   Dummy task to identify the end of the process.
 
-In the Graph View of the DAG, wa can see the dependencies between the tasks, apart fron their type:
+In the Graph View of the DAG, wa can see the dependencies between the tasks, apart from their type:
 
 ![DAG's Graph View](documentation/images/dag_graph_view.png)
 
