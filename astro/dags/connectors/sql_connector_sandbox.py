@@ -54,14 +54,3 @@ class SQLConnector():
         self._sql_hook.run(sql= sql_query)
 
 
-    #def update_status_for_uploaded_files(self, file_list):
-    #    """Update processed files in the database"""
-
-    #    sql_query = f"UPDATE processed_file SET file_status = 'in api' WHERE file_name in ("
-    #    for file in file_list:
-    #        file_values = f"'{file}',"
-    #        sql_query = sql_query + file_values
-    #    sql_query = sql_query[:len(sql_query) - 1] + ")"
-
-    #    self._sql_hook.run(sql= sql_query)
-

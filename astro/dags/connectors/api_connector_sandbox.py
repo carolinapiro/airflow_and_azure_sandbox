@@ -28,14 +28,3 @@ class ApiConnector:
         self._http_hook.run(endpoint = endpoint_string,
                             data = file_data,
                             headers = {"Content-Type":"application/json"})
-        
-    
-    #def send_upload_request_multiple(self, files_data):
-    #    """Upload the files in the ML API"""
-
-    #    endpoint_string = "upload_file/"
-
-    #    for f in files_data:
-    #        self._http_hook.run(endpoint = endpoint_string,
-    #                            data = f,
-    #                            headers = {"Content-Type":"application/json"})

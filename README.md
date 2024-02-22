@@ -93,7 +93,7 @@ The default retry number for each task is defined as 1, but for some tasks this 
 The code in this repo is not containarized, so it is not ready for readers to be able to run it directly if they clone it. Its purpose is to share the logic of the DAG, and that the code could serve as a template or starting point for other development.
 
 The Dockerfile and tests folder are the default ones provided by Astronomer.
-The requirements file was empty by default, so the provider for MSSQL has to be added. 
+The requirements file was empty by default, so the provider for MSSQL had to be added. 
 
 One quick way of running the code locally will be to:
 - Set up a local Airflow instance using Astro, or use your already configured instance.
