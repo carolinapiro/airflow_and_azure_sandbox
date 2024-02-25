@@ -20,7 +20,7 @@ class ApiConnector:
                                    method="POST" )
 
 
-    def send_upload_request(self, file_data):
+    def send_upload_request(self, file_data: dict):
         """Upload the file in the ML API"""
 
         endpoint_string = "upload_file/"

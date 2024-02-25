@@ -1,4 +1,5 @@
 
+from typing import List
 from airflow.providers.microsoft.azure.hooks.wasb import WasbHook
 import json
 
@@ -30,7 +31,7 @@ class BlobConnector():
         return file_list
     
 
-    def add_links_to_file_list(self, file_list):
+    def add_links_to_file_list(self, file_list: List[str]) -> dict:
         """Form the list of files in the container to be inserted in the database"""
 
         file_dict = []
@@ -40,7 +41,7 @@ class BlobConnector():
         return file_dict
     
 
-    def build_data_for_API_upload(self, file_dict):
+    def build_data_for_API_upload(self, file_dict: dict) -> List[dict]:
         """Form the list of files to be uploaded into the ML API"""
         
         file_data = []
