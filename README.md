@@ -12,7 +12,7 @@ The solution has the following architecture:
 ![Solution Architecture](documentation/images/airflow_sandbox_solution_architecture.png)
 
 It consists of an Airflow DAG which connects to: 
-- an Azore Blob Storage to check for new files,
+- an Azure Blob Storage to check for new files,
 - to the ML app's API to upload the files,
 - and to an Azure SQL Database to keep track of the available and uploaded files.
 
@@ -28,6 +28,11 @@ The code for this solution is in the dags folder, divided in 4 files:
 - The dag file:
   - task definitions
   - dag definition
+
+The script to create the table used in the database is also provided, in the "create processed_file table script.sql" file:
+
+- An auto-numerical primary key was used.
+- A unique constraint was added to the file_name field, as that is the one used to identify the files in the Blob Storage and ML app.
     
 ## Tasks Logic
 
