@@ -1,0 +1,24 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[processed_file](
+	[file_id] [int] IDENTITY(1,1) NOT NULL,
+	[file_name] [nvarchar](150) NULL,
+	[link_to_blob_file] [nvarchar](300) NULL,
+	[file_status] [nvarchar](20) NULL,
+	[file_date] [datetime] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[processed_file] ADD PRIMARY KEY CLUSTERED 
+(
+	[file_id] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+ALTER TABLE [dbo].[processed_file] ADD  CONSTRAINT [unique_name] UNIQUE NONCLUSTERED 
+(
+	[file_name] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
