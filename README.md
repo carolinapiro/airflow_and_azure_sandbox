@@ -1,12 +1,21 @@
 # Introduction to the project
-The purpose of this small sandbox project is to use Airflow to automate file uploads to a Machine Learning module's database.
-That module, accessible via a REST API, anwsers topic-specific questions about the files in its database.
+The purpose of this small sandbox project is to use Airflow to automate file uploads to a Machine Learning app's database.
+That app, accessible via a REST API, anwsers topic-specific questions about the files in its database.
 
 Astronomer is used to manage the Airflow instance.
 
 Other technologies used are: Azure SQL Database and Azure Blob Storage.
 
 # Solution structure
+The solution has the following architecture: 
+
+![Solution Architecture](documentation/images/airflow_sandbox_solution_architecture.png)
+
+It consists of an Airflow DAG which connects to: 
+- an Azore Blob Storage to check for new files,
+- to the ML app's API to upload the files,
+- and to an Azure SQL Database to keep track of the available and uploaded files.
+
 The code for this solution is in the dags folder, divided in 4 files:
 
 - In the connectors subfolder:
